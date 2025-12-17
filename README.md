@@ -26,7 +26,7 @@
 ## Table of contents
 -----
   * [Installation](#Installation)
-  * [Downloading Dataset and Checkpoints](#downloading-datasets-and-checkpoints)
+  * [Downloading Dataset and Checkpoints](#downloading-dataset-and-checkpoints)
   * [Running Pretrained Models](#running-pretrained-models)
   * [Training](#Training)
   * [Citation](#Citation)
@@ -43,11 +43,11 @@ pip install -r requirements.txt
 
 ## Downloading Dataset and Checkpoints
 
-### Aria Lidar Dataset
+### Meta Synthetic Environments Lidar Dataset
 
-The Aria Lidar Dataset is a new contribution to the community, containing single-photon lidar measurement renderings for ~100,000 synthetic scenes, as well as various ground truth quantities. For more information on the Aria Lidar Dataset, please visit <a href="https://ai.meta.com/datasets/aria-lidar-dataset">this page</a>.
+The Meta Synthetic Environments (MSE) Lidar Dataset is a new contribution to the community, containing single-photon lidar measurement renderings for ~100,000 synthetic scenes, as well as various ground truth quantities. For more information on the MSE Lidar Dataset, please visit <a href="https://ai.meta.com/datasets/meta-synthetic-environments-lidar-dataset">this page</a>.
 
-To download the Aria Lidar Dataset:
+To download the MSE Lidar Dataset:
 
 ```
 python download.py ./data/dataset.txt
@@ -88,7 +88,7 @@ torchrun --standalone --nproc_per_node=1 eval.py -nl 25 -t specular --checkpoint
 
 ## Training
 
-We train 3 sets of models - one for depth, one for shadow segmentation, and one for specular surface segmentation. Each set of models can be trained with either 4, 25, or 100 illumination points given the Aria Lidar Dataset.
+We train 3 sets of models - one for depth, one for shadow segmentation, and one for specular surface segmentation. Each set of models can be trained with either 4, 25, or 100 illumination points given the MSE Lidar Dataset.
 
 ### Depth Estimation
 
